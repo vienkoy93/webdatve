@@ -67,3 +67,9 @@ body{
 .card:hover{
 	transform: scale(1.2);
 }
+.iconrap{
+	width: 50%;
+}
+.tenrap{
+	margin-left: -100px;
+}
