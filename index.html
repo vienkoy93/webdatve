@@ -1,335 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Cinema</title>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <!--  CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
+         <div class="container">
+         <a class="navbar-brand font-weight-bold  " href="trangchu.html">
+         <img src="img/logo.png">
+         Cinema</a>
+         <!--thu nhỏ-->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menutop">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="menutop">
+            <ul class="list-unstyled navbar-nav mr-auto">
+               <li class="nav-item ml-4 mb-0">
+                  <a class="nav-link " href="#dangchieu">Đang chiếu</a>
+               </li>
+               <li class="nav-item ml-4 mb-0">
+                  <a class="nav-link " href="#sapchieu">Sắp chiếu</a>
+               </li>
+               <li class="nav-item ml-4 mb-0">
+                  <a class="nav-link " href="#thongtin">Thông tin</a>
+               </li>
+            </ul>
+            <ul class="list-unstyled navbar-nav ml-auto">
+               <li class="nav-item ml-3 mb-0">
+                  <a class="nav-link " href="#"> <i class="fas fa-user-circle"></i> Đăng nhập</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <!--Navbar-->
+      <!--Carousel-->
+      <div class="container-fluid">
+         <div class="row banner">
+            <div id="carouselBanner" class="carousel slide carousel-fade" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#carouselBanner" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselBanner" data-slide-to="1"></li>
+                  <li data-target="#carouselBanner" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="2000">
+                     <img class="d-block w-100 imgSlide" src="img/angry.jpg" alt="Angry Bird">
+                     <div class="carousel-caption ">
+                        <a class="btn btn-primary " href="#" role="button">
+                        <i class="fas fa-chevron-circle-right"></i> Đặt vé ngay
+                        </a>
+                     </div>
+                  </div>
+                  <div class="carousel-item" data-interval="2000">
+                     <img class="d-block w-100 imgSlide" src="img/endgame.jpg" alt="Avenger: Endgame">
+                     <div class="carousel-caption ">
+                        <a class="btn btn-primary " href="#" role="button">
+                        <i class="fas fa-chevron-circle-right"></i> Đặt vé ngay
+                        </a>
+                     </div>
+                  </div>
+                  <div class="carousel-item" data-interval="2000">
+                     <img class="d-block w-100 imgSlide" src="img/spider.jpg" alt="Spider man: Far from home">
+                     <div class="carousel-caption ">
+                        <a class="btn btn-primary " href="#" role="button">
+                        <i class="fas fa-chevron-circle-right"></i> Đặt vé ngay
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#carouselBanner" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carouselBanner" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!--Carousel-->
+    <div class="" data-spy="scroll" data-target=".navbar" >
+      <!--DangChieu-->
+      <div class="row bannerDangchieu mt-5" id="dangchieu">
+         <div class="container-fluid pt-4 pb-4">
+            <div class="text-center">
+               <h1 class="mb-3 text-white">
+                  Phim đang chiếu
+               </h1>
+               <p class="text-white mt-0">Danh sách các phim hiện đang chiếu trên hệ thống rạp toàn quốc</p>
+            </div>
+         </div>
+      </div>
+      <div class="container mt-5">
+         <div class="row mt-4">
+            <div class="col-md-2 ">
+               <div class="col-4 col-sm-12">
+                  <div class="dropdown sort-dropdown  mb-4">
+                     <a href="#" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Mới nhất 
+                     </a>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item btn-choose-sort" href="" id="popular">Phổ biến</a>
+                        <a class="dropdown-item btn-choose-sort" href="" id="latest">Mới nhất</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-4 col-sm-12">
+                  <div class="dropdown genre-dropdown  mb-4">
+                     <a href="#" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Thể Loại 
+                     </a>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item btn-choose-genre" href="" id="all">Tất cả</a>
+                        <a class="dropdown-item btn-choose-genre" href="" id="action">Hành động</a>
+                        <a class="dropdown-item btn-choose-genre" href="" id="comedy">Hài hước</a>
+                        <a class="dropdown-item btn-choose-genre" href="" id="drama">Tâm lý</a>
+                        <a class="dropdown-item btn-choose-genre" href="" id="horror">Kinh dị</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-10">
+               <div class="row grid">
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy new" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/1.jpg" alt="Quỷ lùn tinh nghịch" title="Quỷ lùn tinh nghịch" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Quỷ lùn tinh nghịch" class="tenphim">Quỷ Lùn Tinh Nghịch</a>
+                           </h6>
+                           <div class="text-muted">29/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy">
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/2.jpg" alt="Pháp Sư Mù" title="Pháp sư mù" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Pháp sư mù" class="tenphim">Pháp Sư Mù</a>
+                           </h6>
+                           <div class="text-muted">30/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/3.jpg" alt="Avenger:Endgame" title="Avenger:Endgame" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Avenger:Endgame" class="tenphim">Avenger:Endgame</a>
+                           </h6>
+                           <div class="text-muted">1/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/4.jpg" alt="Angry Bird 2" title="Angry Bird 2" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Angry Bird 2" class="tenphim">Angry Bird 2</a>
+                           </h6>
+                           <div class="text-muted">31/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/5.jpg" alt="Spider Man: Far From Home" title="Spider Man: Far From Home" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Spider Man: Far From Home" class="tenphim">Spider Man: Far From Home</a>
+                           </h6>
+                           <div class="text-muted">2/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/6.jpg" alt="Anh Trai Yêu Quái" title="Anh Trai Yêu Quái" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Anh Trai Yêu Quái" class="tenphim">Anh Trai Yêu Quái</a>
+                           </h6>
+                           <div class="text-muted">3/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/5.jpg" alt="Spider Man: Far From Home" title="Spider Man: Far From Home" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Spider Man: Far From Home" class="tenphim">Spider Man: Far From Home</a>
+                           </h6>
+                           <div class="text-muted">2/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/6.jpg" alt="Anh Trai Yêu Quái" title="Anh Trai Yêu Quái" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Anh Trai Yêu Quái" class="tenphim">Anh Trai Yêu Quái</a>
+                           </h6>
+                           <div class="text-muted">3/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/4.jpg" alt="Angry Bird 2" title="Angry Bird 2" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Angry Bird 2" class="tenphim">Angry Bird 2</a>
+                           </h6>
+                           <div class="text-muted">31/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/2.jpg" alt="Pháp Sư Mù" title="Pháp sư mù" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Pháp sư mù" class="tenphim">Pháp Sư Mù</a>
+                           </h6>
+                           <div class="text-muted">30/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/3.jpg" alt="Avenger:Endgame" title="Avenger:Endgame" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Avenger:Endgame" class="tenphim">Avenger:Endgame</a>
+                           </h6>
+                           <div class="text-muted">1/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/1.jpg" alt="Quỷ lùn tinh nghịch" title="Quỷ lùn tinh nghịch" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Quỷ lùn tinh nghịch" class="tenphim">Quỷ lùn tinh nghịch</a>
+                           </h6>
+                           <div class="text-muted">29/5</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!---->
+      <!--SapChieu-->
+      <div class="row bannerDangchieu mt-5" id="sapchieu">
+         <div class="container-fluid pt-4 pb-4">
+            <div class="text-center">
+               <h1 class="mb-3 text-white">
+                  Phim sắp chiếu
+               </h1>
+               <p class="text-white mt-0">Danh sách các phim dự kiến sẽ khỏi chiếu trên hệ thống rạp toàn quốc</p>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+               <div class="mb-3 ">
+                  <h6 class="text-light bg-gradient-primary  mb-1">
+                     Tuần #23
+                  </h6>
+                  <h2 class="h3 text-light">
+                     01/06 - 07/06
+                  </h2>
+               </div>
+               <div class="row grid">
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/1.jpg" alt="Quỷ lùn tinh nghịch" title="Quỷ lùn tinh nghịch" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Quỷ lùn tinh nghịch" class="tenphim">Quỷ lùn tinh nghịch</a>
+                           </h6>
+                           <div class="text-muted">29/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/3.jpg" alt="Avenger:Endgame" title="Avenger:Endgame" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Avenger:Endgame" class="tenphim">Avenger:Endgame</a>
+                           </h6>
+                           <div class="text-muted">1/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/2.jpg" alt="Pháp Sư Mù" title="Pháp sư mù" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Pháp sư mù" class="tenphim">Pháp Sư Mù</a>
+                           </h6>
+                           <div class="text-muted">30/5</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cinema</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!--  CSS -->
+               <div class="mb-3 ">
+                  <h6 class="text-light bg-gradient-primary  mb-1">
+                     Tuần #23
+                  </h6>
+                  <h2 class="h3 text-light">
+                     01/06 - 07/06
+                  </h2>
+               </div>
+               <div class="row grid">
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/1.jpg" alt="Quỷ lùn tinh nghịch" title="Quỷ lùn tinh nghịch" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Quỷ lùn tinh nghịch" class="tenphim">Quỷ lùn tinh nghịch</a>
+                           </h6>
+                           <div class="text-muted">29/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/3.jpg" alt="Avenger:Endgame" title="Avenger:Endgame" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Avenger:Endgame" class="tenphim">Avenger:Endgame</a>
+                           </h6>
+                           <div class="text-muted">1/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/2.jpg" alt="Pháp Sư Mù" title="Pháp sư mù" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Pháp sư mù" class="tenphim">Pháp Sư Mù</a>
+                           </h6>
+                           <div class="text-muted">30/5</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="mb-3 ">
+                  <h6 class="text-light bg-gradient-primary  mb-1">
+                     Tuần #23
+                  </h6>
+                  <h2 class="h3 text-light">
+                     01/06 - 07/06
+                  </h2>
+               </div>
+               <div class="row grid">
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/1.jpg" alt="Quỷ lùn tinh nghịch" title="Quỷ lùn tinh nghịch" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Quỷ lùn tinh nghịch" class="tenphim">Quỷ lùn tinh nghịch</a>
+                           </h6>
+                           <div class="text-muted">29/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/3.jpg" alt="Avenger:Endgame" title="Avenger:Endgame" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Avenger:Endgame" class="tenphim">Avenger:Endgame</a>
+                           </h6>
+                           <div class="text-muted">1/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/2.jpg" alt="Pháp Sư Mù" title="Pháp sư mù" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Pháp sư mù" class="tenphim">Pháp Sư Mù</a>
+                           </h6>
+                           <div class="text-muted">30/5</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="mb-3 ">
+                  <h6 class="text-light bg-gradient-primary  mb-1">
+                     Tuần #23
+                  </h6>
+                  <h2 class="h3 text-light">
+                     01/06 - 07/06
+                  </h2>
+               </div>
+               <div class="row grid">
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/1.jpg" alt="Quỷ lùn tinh nghịch" title="Quỷ lùn tinh nghịch" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Quỷ lùn tinh nghịch" class="tenphim">Quỷ lùn tinh nghịch</a>
+                           </h6>
+                           <div class="text-muted">29/5</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/3.jpg" alt="Avenger:Endgame" title="Avenger:Endgame" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Avenger:Endgame" class="tenphim">Avenger:Endgame</a>
+                           </h6>
+                           <div class="text-muted">1/6</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" >
+                     <div class="card card-xs mb-5">
+                        <a href="" title="">
+                        <img src="img/dangchieu/2.jpg" alt="Pháp Sư Mù" title="Pháp sư mù" class="card-img-top ">
+                        </a>
+                        <div class="card-body border-top p-2">
+                           <h6 class="text-truncate mb-1">
+                              <a href="" title="Pháp sư mù" class="tenphim">Pháp Sư Mù</a>
+                           </h6>
+                           <div class="text-muted">30/5</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer bg-dark pt-3 pb-3 border-top position-static" id="thongtin">
+          <div class="container">
+                <div class="row">
+                      <div class="col-1 ">
+                          <img src="img/logo.png">
+                      </div>
+                      <div class="col-11 col-sm-5 text-center text-sm-left mt-2">
+                          <strong class="h5 text-light ">Trần Viết Tin</strong>
+                      </div>
+                      <div class="">
+                          <button href="" type="button" class="btn btn-outline-light font-weight-bold " data-toggle="modal" data-target="#cinemaModal">Hệ Thống Rạp Tại Tp.Hồ Chí Minh</button>>
+                      </div>
+                               <!-- Modal -->
+                            <div class="modal fade" id="cinemaModal" tabindex="-1" role="dialog" >
+                                  <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Hệ thống rạp tại Tp.Hồ Chí Minh</h5>
+                                        <button type="button" class="close" data-dismiss="modal">
+                                          <span >&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body pt-0 pb-0 pl-0 pr-0">
+                                            <div class="pt-3 list">
+                                                <div class="border-bottom">
+                                                    <div class="row align-items-center pl-4 pr-4 pt-3 pb-3">
+                                                        <div class="col-auto">
+                                                            <!--icon rap-->
+                                                            <img src="img/rap/cgv.jpg" class="iconrap">
+                                                        </div>
+                                                        <div class="col tenrap">
+                                                            <h4 class=" mb-1">CGV VinCom Gò Vấp</h4>
+                                                            <small class="  mb-0">Tầng 5 TTTM Vincom Plaza Gò Vấp, 12 Phan Văn Trị, P.7, Q. Gò Vấp, Tp. Hồ Chí Minh</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="border-bottom">
+                                                    <div class="row align-items-center pl-4 pr-4 pt-3 pb-3">
+                                                        <div class="col-auto">
+                                                            <!--icon rap-->
+                                                            <img src="img/rap/cgv.jpg" class="iconrap">
+                                                        </div>
+                                                        <div class="col tenrap">
+                                                            <h4 class=" mb-1">CGV Hùng Vương Plaza</h4>
+                                                            <small class="  mb-0">Tầng 7, Hùng Vương Plaza, 126 Hùng Vương, Q.5, Tp. Hồ Chí Minh</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="border-bottom">
+                                                    <div class="row align-items-center pl-4 pr-4 pt-3 pb-3">
+                                                        <div class="col-auto">
+                                                            <!--icon rap-->
+                                                            <img src="img/rap/galaxy.png" class="iconrap">
+                                                        </div>
+                                                        <div class="col tenrap">
+                                                            <h4 class=" mb-1">Galaxy Quang Trung</h4>
+                                                            <small class="  mb-0">Lầu 3, CoopMart Foodcosa, 304A Quang Trung, P.11, Q. Gò Vấp, Tp. Hồ Chí Minh</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="border-bottom">
+                                                    <div class="row align-items-center pl-4 pr-4 pt-3 pb-3">
+                                                        <div class="col-auto">
+                                                            <!--icon rap-->
+                                                            <img src="img/rap/galaxy.png" class="iconrap">
+                                                        </div>
+                                                        <div class="col tenrap">
+                                                            <h4 class=" mb-1">Galaxy Nguyễn Du</h4>
+                                                            <small class="  mb-0">116 Nguyễn Du, Q.1, Tp. Hồ Chí Minh</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="border-bottom">
+                                                    <div class="row align-items-center pl-4 pr-4 pt-3 pb-3">
+                                                        <div class="col-auto">
+                                                            <!--icon rap-->
+                                                            <img src="img/rap/bhd.png" class="iconrap">
+                                                        </div>
+                                                        <div class="col tenrap">
+                                                            <h4 class=" mb-1">BHD Phạm Hùng</h4>
+                                                            <small class="  mb-0">Lầu 4, Centre Mall, C6/27 Phạm Hùng, Bình Chánh, Tp. Hồ Chí Minh</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="border-bottom">
+                                                    <div class="row align-items-center pl-4 pr-4 pt-3 pb-3">
+                                                        <div class="col-auto">
+                                                            <!--icon rap-->
+                                                            <img src="img/rap/bhd.png" class="iconrap">
+                                                        </div>
+                                                        <div class="col tenrap">
+                                                            <h4 class=" mb-1">BHD Star Quang Trung</h4>
+                                                            <small class="  mb-0">Lầu 4, Centre Mall, C6/27 Phạm Hùng, Bình Chánh, Tp. Hồ Chí Minh</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="border-bottom">
+                                                    <div class="row align-items-center pl-4 pr-4 pt-3 pb-3">
+                                                        <div class="col-auto">
+                                                            <!--icon rap-->
+                                                            <img src="img/rap/bhd.png" class="iconrap">
+                                                        </div>
+                                                        <div class="col tenrap">
+                                                            <h4 class=" mb-1">BHD Phạm Hùng</h4>
+                                                            <small class="  mb-0">Lầu 4, Centre Mall, C6/27 Phạm Hùng, Bình Chánh, Tp. Hồ Chí Minh</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="border-bottom">
+                                                    <div class="row align-items-center pl-4 pr-4 pt-3 pb-3">
+                                                        <div class="col-auto">
+                                                            <!--icon rap-->
+                                                            <img src="img/rap/bhd.png" class="iconrap">
+                                                        </div>
+                                                        <div class="col tenrap">
+                                                            <h4 class=" mb-1">BHD Phạm Hùng</h4>
+                                                            <small class="  mb-0">Lầu 4, Centre Mall, C6/27 Phạm Hùng, Bình Chánh, Tp. Hồ Chí Minh</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                </div>
+          </div>
+      </div>
+
+
     
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
 
-</head>
 
-<body>
-	<!--Navbar-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
-        <div class="container">
-            <a class="navbar-brand font-weight-bold  " href="trangchu.html">
-  							<img src="img/logo.png">
-  						Cinema</a>
-            <!--thu nhỏ-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menutop">
-	  							<span class="navbar-toggler-icon"></span>
-	  						</button>
-
-            <div class="collapse navbar-collapse" id="menutop">
-                <ul class="list-unstyled navbar-nav mr-auto">
-                    <li class="nav-item ml-4 mb-0">
-                        <a class="nav-link " href="#">Đang chiếu</a>
-
-                    </li>
-                    <li class="nav-item ml-4 mb-0">
-                        <a class="nav-link " href="#">Sắp chiếu</a>
-
-                    </li>
-
-                    <li class="nav-item ml-4 mb-0">
-                        <a class="nav-link " href="#">Thông tin</a>
-
-                    </li>
-                </ul>
-                <ul class="list-unstyled navbar-nav ml-auto">
-                    <li class="nav-item ml-3 mb-0">
-                        <a class="nav-link " href="#"> <i class="fas fa-user-circle"></i> Đăng nhập</a>
-
-                    </li>
-                </ul>
-            </div>
-    </nav>
-    <!--Navbar-->
-    <!--Carousel-->
-        <div class="container-fluid">
-            <div class="row banner">
-		            	<div id="carouselBanner" class="carousel slide carousel-fade" data-ride="carousel">
-		            		<ol class="carousel-indicators">
-							    <li data-target="#carouselBanner" data-slide-to="0" class="active"></li>
-							    <li data-target="#carouselBanner" data-slide-to="1"></li>
-							    <li data-target="#carouselBanner" data-slide-to="2"></li>
-							  </ol>
-						    <div class="carousel-inner">
-						        <div class="carousel-item active" data-interval="2000">
-						            <img class="d-block w-100 imgSlide" src="img/angry.jpg" alt="Angry Bird">
-						            <div class="carousel-caption ">
-						            	<a class="btn btn-primary " href="#" role="button">
-						            		<i class="fas fa-chevron-circle-right"></i> Đặt vé ngay
-						            	</a>
-						            </div>
-						        </div>
-						      	<div class="carousel-item" data-interval="2000">
-						            <img class="d-block w-100 imgSlide" src="img/endgame.jpg" alt="Avenger: Endgame">
-						            <div class="carousel-caption ">
-						            	<a class="btn btn-primary " href="#" role="button">
-						            		<i class="fas fa-chevron-circle-right"></i> Đặt vé ngay
-						            	</a>
-						            </div>
-						        </div>
-						        <div class="carousel-item" data-interval="2000">
-						            <img class="d-block w-100 imgSlide" src="img/spider.jpg" alt="Spider man: Far from home">
-						            <div class="carousel-caption ">
-						            	<a class="btn btn-primary " href="#" role="button">
-						            		<i class="fas fa-chevron-circle-right"></i> Đặt vé ngay
-						            	</a>
-						            </div>
-						        </div>
-						    </div>
-						    <a class="carousel-control-prev" href="#carouselBanner" role="button" data-slide="prev">
-							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-						  	</a>
-						    <a class="carousel-control-next" href="#carouselBanner" role="button" data-slide="next">
-							    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-						  	</a>
-						</div>
-            </div>
-        </div>
-    <!--Carousel-->
-    <!--DangChieu-->
-    <div class="row bannerDangchieu mt-5">
-            <div class="container-fluid pt-4 pb-4">   
-                <div class="text-center">
-                    <h1 class="mb-3 text-white">
-                        Phim đang chiếu
-                    </h1>
-                    <p class="text-white mt-0">Danh sách các phim hiện đang chiếu trên hệ thống rạp toàn quốc</p>
-                </div>
-            </div>
-        </div>
-    <div class="container mt-5">
-    	
-    	<div class="row mt-4">
-    		<div class="col-md-2 ">
-    			<div class="col-4 col-sm-12">
-    				<div class="dropdown sort-dropdown  mb-4">
-    					<a href="#" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Mới nhất 
-    						
-    					</a>
-    					<div class="dropdown-menu">
-    							<a class="dropdown-item btn-choose-sort" href="" data-sort="popular">Phổ biến</a>
-    							<a class="dropdown-item btn-choose-sort" href="" data-sort="latest">Mới nhất</a>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-4 col-sm-12">
-    				<div class="dropdown genre-dropdown  mb-4">
-    					<a href="#" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Thể Loại 
-    						
-    					</a>
-    					<div class="dropdown-menu">
-    							<a class="dropdown-item btn-choose-genre" href="" data-sort="all">Tất cả</a>
-    							<a class="dropdown-item btn-choose-genre" href="" data-sort="action">Hành động</a>
-    							<a class="dropdown-item btn-choose-genre" href="" data-sort="comedy">Hài hước</a>
-    							<a class="dropdown-item btn-choose-genre" href="" data-sort="drama">Tâm lý</a>
-    							<a class="dropdown-item btn-choose-genre" href="" data-sort="horror">Kinh dị</a>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    		<div class="col-md-10">
-    			<div class="row grid">
-        			<div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-    	    			<div class="card card-xs mb-5">
-    	    				<a href="" title="">
-    	    					<img src="img/dangchieu/1.jpg" alt="Quỷ lùn tinh nghịch" title="Quỷ lùn tinh nghịch" class="card-img-top ">
-    	    				</a>
-    	    				<div class="card-body boder-top p-2">
-    	    					<h6 class="text-truncate mb-1">
-    	    						<a href="" title="Quỷ lùn tinh nghịch" class="tenphim">Quỷ Lùn Tinh Nghịch</a>
-    	    					</h6>
-    	    					<div class="text-muted">29/5</div>
-    	    				</div>
-    	    			</div>
-        		    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/2.jpg" alt="Pháp Sư Mù" title="Pháp sư mù" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Pháp sư mù" class="tenphim">Pháp Sư Mù</a>
-                                </h6>
-                                <div class="text-muted">30/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/3.jpg" alt="Avenger:Endgame" title="Avenger:Endgame" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Avenger:Endgame" class="tenphim">Avenger:Endgame</a>
-                                </h6>
-                                <div class="text-muted">1/6</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/4.jpg" alt="Angry Bird 2" title="Angry Bird 2" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Angry Bird 2" class="tenphim">Angry Bird 2</a>
-                                </h6>
-                                <div class="text-muted">31/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/5.jpg" alt="Spider Man: Far From Home" title="Spider Man: Far From Home" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Spider Man: Far From Home" class="tenphim">Spider Man: Far From Home</a>
-                                </h6>
-                                <div class="text-muted">2/6</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/6.jpg" alt="Anh Trai Yêu Quái" title="Anh Trai Yêu Quái" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Anh Trai Yêu Quái" class="tenphim">Anh Trai Yêu Quái</a>
-                                </h6>
-                                <div class="text-muted">3/6</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/5.jpg" alt="Spider Man: Far From Home" title="Spider Man: Far From Home" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Spider Man: Far From Home" class="tenphim">Spider Man: Far From Home</a>
-                                </h6>
-                                <div class="text-muted">2/6</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/6.jpg" alt="Anh Trai Yêu Quái" title="Anh Trai Yêu Quái" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Anh Trai Yêu Quái" class="tenphim">Anh Trai Yêu Quái</a>
-                                </h6>
-                                <div class="text-muted">3/6</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/4.jpg" alt="Angry Bird 2" title="Angry Bird 2" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Angry Bird 2" class="tenphim">Angry Bird 2</a>
-                                </h6>
-                                <div class="text-muted">31/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/2.jpg" alt="Pháp Sư Mù" title="Pháp sư mù" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Pháp sư mù" class="tenphim">Pháp Sư Mù</a>
-                                </h6>
-                                <div class="text-muted">30/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/3.jpg" alt="Avenger:Endgame" title="Avenger:Endgame" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Avenger:Endgame" class="tenphim">Avenger:Endgame</a>
-                                </h6>
-                                <div class="text-muted">1/6</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 phim genre-comedy" data-popularity="" data-release="">
-                        <div class="card card-xs mb-5">
-                            <a href="" title="">
-                                <img src="img/dangchieu/1.jpg" alt="Quỷ lùn tinh nghịch" title="Quỷ lùn tinh nghịch" class="card-img-top ">
-                            </a>
-                            <div class="card-body boder-top p-2">
-                                <h6 class="text-truncate mb-1">
-                                    <a href="" title="Quỷ lùn tinh nghịch" class="tenphim">Quỷ lùn tinh nghịch</a>
-                                </h6>
-                                <div class="text-muted">29/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-
-    	       </div>
-    		</div>
-    	</div>
-    </div>
-    <!---->
-    <!--SapChieu-->
-    <div class="row bannerDangchieu mt-5">
-            <div class="container-fluid pt-4 pb-4">   
-                <div class="text-center">
-                    <h1 class="mb-3 text-white">
-                        Phim sắp chiếu
-                    </h1>
-                    <p class="text-white mt-0">Danh sách các phim dự kiến sẽ khỏi chiếu trên hệ thống rạp toàn quốc</p>
-                </div>
-            </div>
-        </div>
-    <script src="js/popper.min.js"></script>
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-</body>
-
+      <script src="js/popper.min.js"></script>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/script.js"></script>
+   </body>
 </html>
