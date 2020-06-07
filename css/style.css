@@ -60,11 +60,11 @@ body{
 .phim{
 
 }
-.card{
+.cardphim{
 	transition: transform 1.2s;
 
 }
-.card:hover{
+.cardphim:hover{
 	transform: scale(1.2);
 }
 .iconrap{
@@ -72,4 +72,42 @@ body{
 }
 .tenrap{
 	margin-left: -100px;
+}
+/*datve*/
+.bodydatve{
+	background-image: url();
+}
+.bannerphim{
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+}
+
+.ten{
+	position: absolute;
+	top: 30%;
+	color: white;
+	margin-left: 50px;
+	width: 100%;
+}
+.mota{
+	position: absolute;
+	top: 40%;
+	color: white;
+	margin-left: 50px;
+}
+.anhphim{
+	width: 15%;
+	position: absolute;
+	top: 20%;
+	margin-left: 65%;
+}
+.trailer{
+	position: absolute;
+	top: 73%;
+	margin-left: 70%;
+}
+.bannerphim>img{
+  width: 100%;
+  opacity: .1;
 }
